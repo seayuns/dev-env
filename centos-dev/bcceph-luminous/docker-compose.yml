@@ -1,0 +1,16 @@
+version: "2.0.3"
+services:
+  env:
+    image: u16-dev:latest
+    container_name: ubuntu-16-dev
+    networks:
+      - dev
+    ports:
+      - "127.0.0.1:45678:22"
+      - "127.0.0.1:8730:873"
+    cap_add:
+      - ALL
+
+networks:
+    dev: 
+      name: dev
