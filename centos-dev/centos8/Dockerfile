@@ -1,0 +1,2 @@
+FROM centos:centos8
+RUN rm /etc/yum.repos.d/*.repo -rf && curl -o /etc/yum.repos.d/CentOS-Base.repo   https://mirrors.aliyun.com/repo/Centos-8.repo && sed -i -e '/mirrors.cloud.aliyuncs.com/d' -e '/mirrors.aliyuncs.com/d' /etc/yum.repos.d/CentOS-Base.repo && yum makecache  && yum install -y https://mirrors.aliyun.com/epel/epel-release-latest-8.noarch.rpm && sed -i 's|^#baseurl=https://download.example/pub|baseurl=https://mirrors.aliyun.com|' /etc/yum.repos.d/epel* && sed -i 's|^metalink|#metalink|' /etc/yum.repos.d/epel* && yum makecache
