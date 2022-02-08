@@ -1,2 +1,2 @@
 # dev-env
-dev env , dockerfile
+std dev envirment , dockerfile
