@@ -1,2 +1,2 @@
 # dev-env
-std dev envirment , dockerfile
+std dev environment , dockerfile or docker-compose template file
